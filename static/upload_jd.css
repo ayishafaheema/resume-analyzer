@@ -1,0 +1,79 @@
+body {
+    background-color: lightblue;
+    min-height: 100vh;
+    margin: 0;
+
+    /* center everything vertically & horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title centered */
+h1 {
+    color: #243b5a;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Container centered with rounded corners */
+.container {
+    background-color: rgb(208, 242, 254);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Label just above textarea */
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #243b5a;
+}
+
+/* Textarea styling */
+textarea {
+    background-color: rgb(227, 244, 251);
+    border-radius: 10px;
+    color: #243b5a;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #243b5a;
+}
+
+/* Button wrapper (no HTML change needed) */
+.container + div {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Buttons same size + animation */
+button {
+    width: 160px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background-color: #243b5a;
+    cursor: pointer;
+    margin-top: 15px;
+
+    transition: all 0.3s ease;
+
+}
+
+/* Hover animation */
+button:hover {
+    background-color: white;
+    color: #243b5a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

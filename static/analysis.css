@@ -1,0 +1,43 @@
+h1{
+    text-align:center;
+    color: rgb(182, 219, 232);
+}
+body{
+    background:#243b5a;
+}
+.form_boxes{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    margin: 50px 100px;
+    color: rgb(195, 228, 239);
+}
+label{
+    font-weight:bold;
+    display:block;
+    margin-bottom:10px;
+    color:rgb(182, 219, 232);
+    margin-left:70px;
+}
+button{
+    
+    color:#243b5a;
+    padding:10px 20px;
+    border-radius:4px;
+    font-weight:bold;
+    margin-left:650px;
+
+}
+.job_box, .resume_box{
+    flex:1;              /* space inside */
+    border-radius: 12px;
+    color: rgb(194, 228, 240);              
+
+}
+textarea{
+        background-color:rgb(182, 219, 232);  
+        border-radius: 5px;
+        color:#4B371C;
+        font-family: Arial, sans-serif; 
+        font-weight: bold;
+}

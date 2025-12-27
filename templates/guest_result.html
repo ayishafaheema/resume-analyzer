@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='guest_result.css') }}">
+</head>
+<body>
+
+<h1>Resume Analyzer</h1>
+
+<div class="container">
+
+    <div class="box-matched">
+        <h2>Matched Keywords ({{ result.matched_count }})</h2>
+        <ul>
+            {% for word in result.matches %}
+                <li>{{ word }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="box-missing">
+        <h2>Missing Keywords ({{ result.missing_count }})</h2>
+        <ul>
+            {% for word in result.missing %}
+                <li>{{ word }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+
+{% set total = result.matched_count + result.missing_count %}
+
+{% if total > 0 %}
+    <p>
+        You matched
+        {{ ((result.matched_count / total) * 100) | round(2) }}%
+        of the keywords.
+    </p>
+{% else %}
+    <p>No keywords found in either the job description or the resume.</p>
+{% endif %}
+
+<div class="chart-box">
+    <h2>Keyword Match Chart</h2>
+    <div class="chart_container">
+        <img src="{{ url_for('static', filename='guest_chart.png') }}"
+             alt="Keyword Match Chart">
+    </div>
+</div>
+
+<br>
+<a href="{{ url_for('guest.guest_analyze') }}">Analyze another resume</a>
+
+</body>
+</html>

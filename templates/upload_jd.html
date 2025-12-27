@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='upload_jd.css') }}">
+</head>
+<body>
+
+    <h1>Upload JD</h1>
+
+    <!-- ✅ FORM ADDED -->
+    <form method="POST" action="{{ url_for('analyze.analyze_jd') }}">
+
+        <div class="container">
+            <label for="jd">Job Description:</label>
+
+            <!-- ✅ name is what Flask reads -->
+            <textarea
+                id="jd"
+                name="jd_text"
+                placeholder="Paste your job description here..."
+                rows="25"
+                cols="65"
+                required></textarea>
+        </div>
+
+        <div>
+            <!-- ✅ submit button -->
+            <button type="submit">Analyze jd</button>
+            <button type="button">Upload resume</button>
+        </div>
+
+    </form>
+
+    <!-- ✅ POPUP -->
+    <div id="popup-resume" class="popup-resume" style="display:none;">
+        <div class="popup-box">
+            <h3 class="popup-title">Extracted Skills</h3>
+
+            <ul id="popup-message" class="popup-message"></ul>
+
+            <button class="popup-btn" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <!-- ✅ IF SKILLS EXIST, OPEN POPUP -->
+    {% if skills %}
+    <script>
+        window.onload = function () {
+            showPopup("{{ skills | join(', ') }}");
+        };
+    </script>
+    {% endif %}
+
+    <!-- ✅ JS FILE INCLUDED -->
+    <script src="{{ url_for('static', filename='popup.js') }}"></script>
+
+</body>
+</html>

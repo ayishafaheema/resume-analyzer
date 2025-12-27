@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>welcome page</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='welcome.css')}}">
+    </head>
+    <body>
+        <div class="welcome-container">
+            <div class ="header">
+                <h1>Resume Analyzer</h1>
+                <h3>Analyze.Optimize.Match your resume</h3>
+                <p>Scan resume and compare with Job description 
+                    to evaluate role compatibility and skill alignment</p>        
+                <div class="btn-grp">   
+                    <div class="row">     
+                        <button class="Sign-Up" onclick="location.href='{{url_for('auth.signup')}}'">Sign Up</button>
+                        <button class="Sign-In" onclick="location.href='{{url_for('auth.signin')}}'">Sign In</button> 
+                    </div>
+                    <button class="Try-as-guest" onclick="location.href='{{url_for('guest.guest_analyze')}}'">Try as guest</button>
+                <div class="box-row">
+                    <div class="container">
+                        <h3>Resume Parsing</h3>
+                        <p>upload your resume and 
+                            convert it into structured data output</p>
+                    </div>
+                    <div class="container">
+                        <h3>skill extraction</h3>
+                        <p>Extract skills from resume & 
+                            job description Using AI</p>
+                    </div>
+                    <div class="container">
+                        <h3>Match and Analysis</h3>
+                        <p>compare resume with job description 
+                            and generate fit score & insight</p>
+                    </div>
+                    <div class="container">
+                        <h3>Gap Analysis</h3>
+                        <p>Highlight missing skills and keywords
+                            for better role alignment</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <p>Built for students and job seekers</p>
+                    <p>@ 2025 Resume Analyzer </P>  
+                </div>         
+            </div>  
+        </div>    
+    </body>
+</html>

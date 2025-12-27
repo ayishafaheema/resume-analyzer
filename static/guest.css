@@ -1,0 +1,61 @@
+h1{
+    text-align:center;
+    color: #243b5a;
+}
+body{
+    background:rgb(182, 219, 232);
+}
+.form_boxes{
+
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    margin: 20px auto ;
+    max-width: 1200px;
+    color: rgb(208, 242, 254);
+}
+label{
+    font-weight:bold;
+    display:block;
+    margin-bottom:10px;
+    color:rgb(208, 242, 254);
+    margin-left:70px;
+}
+button{
+    
+    color:rgb(208, 242, 254);
+    padding:10px 20px;
+    border-radius:4px;
+    font-weight:bold;
+    margin-left:650px;
+    background-color: #243b5a;
+
+}
+.job_box, .resume_box{
+
+    background-color:#203959 ;
+    padding:  20px;
+    border-radius: 15px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    flex:1;              /* space inside */
+    
+    color: #243b5a;              
+
+}
+/*textarea{
+        background-color:rgb(182, 219, 232);  
+        border-radius: 5px;
+        color:#4B371C;
+        font-family: Arial, sans-serif; 
+        font-weight: bold;
+}*/
+button:hover {
+    color: #243b5a;
+    background-color: rgb(208, 242, 254);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

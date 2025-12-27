@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='guest.css') }}">
+    <title>Resume Analyzer</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Resume Analyzer</h1>
+
+    <form action="{{ url_for('guest.guest_analyze') }}" method="post" enctype="multipart/form-data">
+
+        <div class="form_boxes">
+
+            <div class="job_box">
+                <label for="job_description">Job Description:</label>
+                <textarea id="job_description" name="job_description"
+                    placeholder="Paste the job description here..."
+                    rows="28" cols="70"></textarea>
+                <br>
+                <input type="file" name="job_file">
+            </div>
+
+            <div class="resume_box">
+                <label for="resume">Resume:</label>
+                <textarea id="resume" name="resume"
+                    placeholder="Paste your resume here..."
+                    rows="28" cols="70"></textarea>
+                <br>
+                <input type="file" name="resume_file">
+            </div>
+
+        </div>
+
+        <button type="submit">Analyze</button>
+    </form>
+</div>
+
+</body>
+</html>
