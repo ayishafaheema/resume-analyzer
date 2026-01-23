@@ -36,4 +36,23 @@ This project is built to demonstrate backend development skills, resume parsing,
 
 ### Other
  - Git
- - Virtual Environment (venv)
+ 
+
+ ---
+## 📌 Work in Progress
+
+- Full checkout and payment integration  
+- User authentication and order history  
+- Additional features to enhance shopping experience  
+
+---
+
+## 💡 About This Project
+
+This project demonstrates my ability to build a complete web application using JavaScript for both frontend logic and dynamic interactions. It highlights DOM manipulation, event handling, and modern web design principles.
+
+---
+
+## 📫 Contact
+
+Reach out: **ayishafaheema77@gmail.com**
